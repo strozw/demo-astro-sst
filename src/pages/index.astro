@@ -1,11 +1,11 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <ul>
+    <li><a href="/ssr">SSR Page</a></li>
+    <li><a href="/isr">ISR Page</a></li>
+    <li><a href="/server-island">Server Island Page</a></li>
+  </ul>
 </Layout>

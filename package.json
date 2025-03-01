@@ -1,15 +1,24 @@
 {
-  "name": "",
+  "name": "demo-astro-sst",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "astro": "astro",
     "build": "astro build",
+    "dev": "astro dev",
     "preview": "astro preview",
-    "astro": "astro"
+    "sst": "pnpx sst@latest",
+    "sst-dev": "pnpm sst dev",
+    "sst-deploy": "pnpm sst deploy --stage production",
+    "sst-remove": "pnpm sst remove --stage production"
   },
   "dependencies": {
-    "astro": "^5.4.1"
+    "@astrojs/node": "^9.1.2",
+    "astro": "^5.4.1",
+    "astro-sst": "2.45.2"
   },
-  "packageManager": "pnpm@10.2.0+sha512.0d27364e0139c6aadeed65ada153135e0ca96c8da42123bd50047f961339dc7a758fc2e944b428f52be570d1bd3372455c1c65fa2e7aa0bfbf931190f9552001"
+  "packageManager": "pnpm@10.2.0+sha512.0d27364e0139c6aadeed65ada153135e0ca96c8da42123bd50047f961339dc7a758fc2e944b428f52be570d1bd3372455c1c65fa2e7aa0bfbf931190f9552001",
+  "devDependencies": {
+    "sst": "^3.9.19"
+  }
 }

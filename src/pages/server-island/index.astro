@@ -1,0 +1,14 @@
+---
+import SlowComponent from '../../components/SlowComponent.astro';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout>
+  <div style="background-color: #E8E8E8;">
+    <h1>Server Island Demo</h1>
+    
+    <SlowComponent second={3} server:defer>
+      <div slot="fallback">....</div>
+    </SlowComponent>
+  </div>
+</Layout>

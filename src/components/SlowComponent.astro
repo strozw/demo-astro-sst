@@ -1,0 +1,7 @@
+---
+
+const sec = (Astro.props.second ?? 3);
+await new Promise((resolve) => setTimeout(resolve, sec * 1000))
+---
+
+<div style="font-weight: bold;">{sec}s passed</div>
