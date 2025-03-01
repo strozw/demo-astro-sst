@@ -21,7 +21,6 @@
 | `pnpm install`             | 依存関係をインストール                            |
 | `pnpm dev`             | ローカル開発サーバーを `localhost:4321` で開始      |
 | `pnpm build`           | 本番サイトを `./dist/` にビルド          |
-| `pnpm preview`         | デプロイ前にビルドをローカルでプレビュー     |
 | `pnpm astro ...`       | `astro add` や `astro check` などのCLIコマンドを実行 |
 | `pnpm astro -- --help` | Astro CLIのヘルプを表示                     |
 | `pnpm sst-deploy` | sstを使用してAWSサーバーレスサービスにデプロイ                     |

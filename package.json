@@ -6,7 +6,6 @@
     "astro": "astro",
     "build": "astro build",
     "dev": "astro dev",
-    "preview": "astro preview",
     "sst": "pnpx sst@latest",
     "sst-dev": "pnpm sst dev",
     "sst-deploy": "pnpm sst deploy --stage production",
