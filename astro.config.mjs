@@ -10,7 +10,8 @@ export default defineConfig({
   adapter: aws({
     responseMode: "stream",
     serverRoutes: [
-      "/posts/*"
+      "/ssr",
+      "/isr",
     ]
   })
 });
