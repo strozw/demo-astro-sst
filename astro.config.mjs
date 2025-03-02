@@ -11,6 +11,7 @@ export default defineConfig({
     responseMode: "stream",
     serverRoutes: [
       "/ssr",
+      "/isr",
     ]
   })
 });
