@@ -1,0 +1,20 @@
+---
+import SlowComponent from '../../components/SlowComponent.astro';
+import Layout from '../../layouts/Layout.astro';
+
+// キャッシュ制御ヘッダーを設定してキャッシュの動作を管理します
+// - public: レスポンスをすべてのキャッシュに保存できることを示します
+// - max-age=0: クライアント側のキャッシュが即座に期限切れになることを示します
+// - s-maxage=60: プロキシキャッシュ(CDN)が60秒間レスポンスをキャッシュできることを示します
+// - stale-while-revalidate=60: バックグラウンドでオリジンを再検証しながら60秒間古いコンテンツを提供します
+// - stale-if-error=60: オリジンでエラーが発生した場合、60秒間古いコンテンツを提供します
+Astro.response.headers.set('cache-control', 'public, max-age=0, s-maxage=60, stale-while-revalidate=60, stale-if-error=60');
+---
+
+<Layout>
+  <h1>ISR@{new Date()}</h1>
+
+  <SlowComponent second={3} server:defer>
+    <div slot="fallback">....</div>
+  </SlowComponent>
+</Layout>
